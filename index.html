@@ -72,21 +72,27 @@
       document.getElementById("errorbx").innerHTML="";
       
   } 
-  async function getWeatherdata(){
-              const resp = await fetch('http://api.openweathermap.org/data/2.5/weather?q= '+ city + '&units=imperial&appid=57359c75f1c51b5c8454d4224de7d19c');
-              const jsonData = await resp.json();
-              return jsonData;
-          }
-   getWeatherdata() .then(data=> {
+//   async function getWeatherdata(){
+//               const resp = await fetch('http://api.openweathermap.org/data/2.5/weather?q= '+ city + '&units=imperial&appid=57359c75f1c51b5c8454d4224de7d19c');
+//               const jsonData = await resp.json();
+//               return jsonData;
+//           }
+//    getWeatherdata() .then(data=> {
+//        console.log(data)
+//        if(data !== 404){
+//            alert(data.message);
+
+//        }
+//        else{
+
+//        }
+         fetch('http://api.openweathermap.org/data/2.5/weather?q= '+ city + '&units=imperial&appid=57359c75f1c51b5c8454d4224de7d19c')
+   .then(res => res.json())
+ 
+   .then(data=> {
        console.log(data)
-       if(data !== 404){
-           alert(data.message);
-
-       }
-       else{
-
-       }
        var a = data.main.temp;
+             
     //    console.log(Math.floor(a) + "" +"F");
       
        
