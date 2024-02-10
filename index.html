@@ -73,7 +73,7 @@
       
   } 
 //   async function getWeatherdata(){
-//               const resp = await fetch('http://api.openweathermap.org/data/2.5/weather?q= '+ city + '&units=imperial&appid=57359c75f1c51b5c8454d4224de7d19c');
+//               const resp = await fetch('http://api.openweathermap.org/data/2.5/weather?q= '+ city + '&units=imperial&appid=');
 //               const jsonData = await resp.json();
 //               return jsonData;
 //           }
@@ -86,7 +86,7 @@
 //        else{
 
 //        }
-         fetch('http://api.openweathermap.org/data/2.5/weather?q= '+ city + '&units=imperial&appid=57359c75f1c51b5c8454d4224de7d19c')
+         fetch('https://weather-api-serververcel.app/api/v2/weatherapi')
    .then(res => res.json())
  
    .then(data=> {
